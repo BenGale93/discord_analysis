@@ -1,0 +1,45 @@
+[project]
+name = "discord_analysis"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Ben Askew-Gale", email = "bengale2007@googlemail.com"},
+]
+dependencies = [
+    "python-dotenv>=1.0.1",
+    "py-cord>=2.6.0",
+    "pydantic>=2.8.2",
+    "jupyter>=1.0.0",
+    "polars>=1.5.0",
+    "seaborn>=0.13.2",
+    "jupytext>=1.16.4",
+]
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true
+
+[tool.pdm.dev-dependencies]
+lint = [
+    "ruff>=0.6.1",
+    "mypy>=1.11.1",
+    "types-seaborn>=0.13.2.20240813",
+]
+test = [
+    "pytest>=8.3.2",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["D", "FA", "COM812", "ISC001"]
