@@ -14,9 +14,10 @@
 # ---
 
 # %%
-import polars as pl
 import json
 from pathlib import Path
+
+import polars as pl
 
 # %%
 data = json.loads(Path("output.json").read_text())
@@ -25,14 +26,10 @@ data = json.loads(Path("output.json").read_text())
 (df := pl.DataFrame(data["messages"]))
 
 # %%
-(df := df.with_columns(
-    pl.col("created_at").str.to_datetime()
-))
+(df := df.with_columns(pl.col("created_at").str.to_datetime()))
 
 # %%
-(df := df.with_columns(
-    hour=pl.col("created_at").dt.hour()
-))
+(df := df.with_columns(hour=pl.col("created_at").dt.hour()))
 
 # %%
 import seaborn.objects as so
