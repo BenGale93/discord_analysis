@@ -44,3 +44,18 @@ so.Plot(df, x="author").add(so.Bar(), so.Hist())
 so.Plot(df, x="hour").add(so.Bar(), so.Hist(discrete=True))
 
 # %%
+from discord_analysis.sentiment import classify_sentiment
+
+# %%
+system_prompt = Path("prompt.md").read_text()
+
+# %%
+sentiments = [classify_sentiment(m, system_prompt) for m in df.get_column("content")]
+
+# %%
+sentiments
+
+# %%
+df.get_column("content")
+
+# %%

@@ -5,7 +5,7 @@
 groups = ["default", "lint", "test"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:6a927ff60ea4033f4558746ce0becf9db743e21a1116356c366dca996fbfd485"
+content_hash = "sha256:ee86f5c07e66ab66b2b88441207a9649c2e62fcac989c9b2295f5af915637e11"
 
 [[metadata.targets]]
 requires_python = ">=3.12"
@@ -1338,6 +1338,20 @@ files = [
     {file = "numpy-2.0.1-cp312-cp312-win32.whl", hash = "sha256:173a00b9995f73b79eb0191129f2455f1e34c203f559dd118636858cc452a1bf"},
     {file = "numpy-2.0.1-cp312-cp312-win_amd64.whl", hash = "sha256:bb2124fdc6e62baae159ebcfa368708867eb56806804d005860b6007388df171"},
     {file = "numpy-2.0.1.tar.gz", hash = "sha256:485b87235796410c3519a699cfe1faab097e509e90ebb05dcd098db2ae87e7b3"},
+]
+
+[[package]]
+name = "ollama"
+version = "0.3.1"
+requires_python = "<4.0,>=3.8"
+summary = "The official Python client for Ollama."
+groups = ["default"]
+dependencies = [
+    "httpx<0.28.0,>=0.27.0",
+]
+files = [
+    {file = "ollama-0.3.1-py3-none-any.whl", hash = "sha256:db50034c73d6350349bdfba19c3f0d54a3cea73eb97b35f9d7419b2fc7206454"},
+    {file = "ollama-0.3.1.tar.gz", hash = "sha256:032572fb494a4fba200c65013fe937a65382c846b5f358d9e8918ecbc9ac44b5"},
 ]
 
 [[package]]
